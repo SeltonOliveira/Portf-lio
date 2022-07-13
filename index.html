@@ -27,8 +27,8 @@
                 <img src="./imagens/fundo.jpg" alt="">
             </div>
             <div class="banner">
-                <h1>Web Developer & Front End Designer</h1>
-                <p>Selton Fiusa</p>
+                <h1>Desenvolvedor Web & Front End</h1>
+                <p>Selton de Oliveira Fiusa</p>
                 <a href="#">
                     <button>Saiba mais</button>
                 </a>
@@ -182,8 +182,32 @@
                 </div>
             </div>
         </section>
+        <section class="sessao-orcamento">
+            <div class="orcamento-wrapper">
+                <h1>Faça um orçamento</h1>
+                <form>
+                    <label for="qtde">Qtde de Páginas</label>
+                    <input type="number" min="1" name="qtde" id="qtde">
+                    <label for="js">Preciso de um script JS</label>
+                    <input type="checkbox" name="js" id="js">
+                    <label>Layout</label>
+                    <div class="group-layout">
+                        <div>
+                            <input type="radio" name="layout" id="layout-sim">
+                            <label for="layout-sim">Preciso de um layout</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="layout" id="layout-nao">
+                            <label for="layout-nao">Já tenho um layout</label>
+                        </div>
+                    </div>
+                    <label for="prazo">Prazo</label>
+                    <input type="range" name="prazo" id="prazo">
+                    <button class="btn btn-orcamento" type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
     </div>
-    
 </body>
 <script src="./js/script.js"></script>
 </html>

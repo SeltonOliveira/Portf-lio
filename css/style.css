@@ -148,9 +148,11 @@ header{
     cursor: pointer;
     opacity: 0;
     animation: moveBanner 1s 0.9s forwards;
+    transition: box-shadow 0.3s;
 }
 .banner button:hover{
     background: #9e13a3;
+    box-shadow: 0 0 1em rgb(129, 14, 145);
 }
 
 
@@ -306,12 +308,14 @@ header{
 .projetos{
     display: flex;
     justify-content: space-evenly;
-    border-bottom: 2px solid #555;
+    margin-bottom: 2rem;
 }
 .card{
     width: 18rem;
     height: 25rem;
     position: relative;
+    border: solid 3px #262626;
+    border-radius: 12px;
 }
 .card-img-wrapper{
     width: 100%;
@@ -389,9 +393,12 @@ header{
 /*SESSÃO-CONTATOS*/
 
 .sessao-contato{
+    border-top:2px solid #555 ;
     width: 100%;
     height: 100vh;
-    background-color: #272727;
+    /*background-color: #272727;*/
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(80,34,113,1) 50%, rgba(0,0,0,1) 97%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -400,12 +407,13 @@ header{
     width: 45%;
     height: 33rem;
     display: flex;
-    box-shadow: 0 2rem 3rem rgba(0, 0, 0,0.5);
+    /*box-shadow: 0 2rem 3rem rgba(0, 0, 0,0.5);*/
+    box-shadow: 0 0 1em rgb(43, 5, 48);
 }
 .contato-left{
     width: 35%;
-    background: linear-gradient(rgba(15,15,15,0.6),rgba(22,22,22,0.9)), 
-    url(../imagens/contato.jpg);
+    background: linear-gradient(rgba(15,15,15,0.1),rgba(22,22,22,0.9)), 
+    url(../imagens/Neon-RGB-Triangle-in-Nature.jpg);
     background-size: cover;
 }
 
@@ -470,7 +478,84 @@ header{
     width: 70%;
     height: 2rem;
     margin-top: 1rem;
+    border-radius: 50px;
+    transition: box-shadow 0.5s;
 }
 .btn-submit:hover{
     background: #9e13a3;
+    box-shadow: 0 0 1.2em rgb(129, 14, 145);
+
+}
+
+
+/*SESSAO ORÇAMENTO*/
+
+.sessao-orcamento{
+    width: 100%;
+    height: 100vh;
+    background: url("../imagens/bg-orcamento.jpg");
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orcamento-wrapper{
+    width: 60%;
+    height: 80%;
+    background-color: #ffffff99;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.sessao-orcamento h1{
+    position: absolute;
+    top: -2.5rem;
+    left: 2rem;
+    background: #834d9b;
+    background: -webkit-linear-gradient(to right, #d04ed6, #834d9b);
+    background: linear-gradient(to right, #d04ed6, #834d9b);
+    padding: 0 3rem;
+    color: #ffff;
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: lighter;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5) ;
+    border-radius: 10px;
+}
+
+.sessao-orcamento form{
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.sessao-orcamento label{
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sessao-orcamento input[type="number"]{
+    font-family: var(--font-secundary);
+    width: 4rem;
+    font-size: 2rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    padding: 0.4rem;
+}
+
+.sessao-orcamento input[type="checkbox"]{
+    width: 1rem;
+}
+
+.btn-orcamento{
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    grid-column: 2;
 }
